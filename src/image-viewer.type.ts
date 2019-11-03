@@ -202,6 +202,13 @@ export class Props {
   };
 
   /**
+   * function that fires when user went to the end of the image array
+   */
+  public onArrayEnd?: () => void = () => {
+    //
+  };
+
+  /**
    * 渲染loading元素
    */
   public loadingRender?: () => React.ReactElement<any> = () => {

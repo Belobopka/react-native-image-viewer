@@ -328,6 +328,9 @@ export default class ImageViewer extends React.Component<Props, State> {
     if (this.state.currentShowIndex === this.props.imageUrls.length - 1) {
       // 回到之前的位置
       this.resetPosition.call(this);
+      if (typeof this.props.onArrayEnd === 'function') {
+        this.props.onArrayEnd();
+      }
       return;
     }
 
